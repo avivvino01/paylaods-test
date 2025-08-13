@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOI - Login</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .login-container {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .logo {
+        font-size: 72px;
+        font-weight: 900;
+        color: #ff4a33;
+        letter-spacing: -2px;
+        margin-bottom: 60px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+      }
+
+      .welcome-text {
+        font-size: 32px;
+        font-weight: 400;
+        color: #333333;
+        margin-bottom: 8px;
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        font-size: 32px;
+        font-weight: 400;
+        color: #333333;
+        margin-bottom: 60px;
+        line-height: 1.2;
+      }
+
+      .form-group {
+        margin-bottom: 16px;
+        text-align: left;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 16px;
+        border: 2px solid #e5e5e5;
+        border-radius: 8px;
+        background-color: #ffffff;
+        color: #333333;
+        transition: border-color 0.2s ease;
+        outline: none;
+      }
+
+      .form-input:focus {
+        border-color: #ff4a33;
+      }
+
+      .form-input::placeholder {
+        color: #999999;
+        font-size: 16px;
+      }
+
+      .sign-in-button {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #ff4a33;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        margin-bottom: 24px;
+        outline: none;
+      }
+
+      .sign-in-button:hover {
+        background-color: #e63e2a;
+      }
+
+      .sign-in-button:active {
+        background-color: #d13620;
+      }
+
+      .help-text {
+        font-size: 14px;
+        color: #666666;
+        margin-bottom: 8px;
+      }
+
+      .reset-link {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .reset-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 480px) {
+        .logo {
+          font-size: 56px;
+          margin-bottom: 40px;
+        }
+
+        .welcome-text,
+        .subtitle {
+          font-size: 24px;
+        }
+
+        .subtitle {
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="logo">KOI</div>
+
+      <div class="welcome-text">Welcome back.</div>
+      <div class="subtitle">Log in to your account below.</div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-input"
+            placeholder="name@company.com"
+            id="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-input"
+            placeholder="Password"
+            id="password"
+            required
+          />
+        </div>
+
+        <button type="submit" class="sign-in-button">Sign in</button>
+      </form>
+
+      <div class="help-text">
+        Need help logging in?
+        <a href="#" class="reset-link">Reset your password</a>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Add your login logic here
+          console.log("Login form submitted");
+        });
+    </script>
+  </body>
+</html>
